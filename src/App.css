@@ -44,10 +44,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  border: black solid 1px;
+  border: solid 3px gray;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 50%;
-  border-radius: 30px;
+  border-radius: 1.5rem;
 }
 
 .my-detalle img {
