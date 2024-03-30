@@ -1,10 +1,9 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 const NavBar = () => {
   return (
-    <>
       <Nav className="justify-content-end text-white bg-secondary p-3 nav" activeKey="/home">
         <span className='me-auto'><i className="fa-solid fa-location-dot my-icon"></i></span>
         <NavLink
@@ -16,7 +15,6 @@ const NavBar = () => {
           to="/pokemones">Pokemones
         </NavLink>
       </Nav>
-    </>
   );
 };
 

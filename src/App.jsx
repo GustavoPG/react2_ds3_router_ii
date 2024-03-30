@@ -1,12 +1,11 @@
 import './App.css';
-import NavBar from './components/NavBar';
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import Home from './views/Home';
 import Pokemones from './views/Pokemones';
 import NotFound from './views/NotFound';
 import PokemonDetalle from './views/PokemonDetalle';
-//import PokemonProvider from './contexts/MyContext';
 
 function App() {
   const [data, setData] = useState(null);
@@ -29,7 +28,6 @@ function App() {
 
   return (
     <>
-    {/* <PokemonProvider> */}
       <NavBar />
       <Routes>
         <Route
@@ -49,7 +47,6 @@ function App() {
           element={<NotFound />}
         />
       </Routes>
-    {/* </PokemonProvider>  */}
     </>
   );
 };

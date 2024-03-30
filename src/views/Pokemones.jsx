@@ -1,20 +1,16 @@
-import { Container, Row } from 'react-bootstrap';
-import { useState, useContext } from "react";
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import { PokemonContext } from '../contexts/MyContext';
+import { Container, Row } from 'react-bootstrap';
 
 const Pokemones = (props) => {
-    //const { data } = useContext(PokemonContext);
     const [selectedPokemon, setSelectedPokemon] = useState("");
     const navigate = useNavigate();
 
     const handleSelectChange = (event) => {
         setSelectedPokemon(event.target.value);
-        //console.log(selectedPokemon);
     };
 
     const getPokemon = () => {
-        //selectPokemon(selectedPokemon);
         if (selectedPokemon !== 'pokemones' && selectedPokemon !== '')
         {
         navigate(`/pokemones/${selectedPokemon}`);
@@ -26,7 +22,6 @@ const Pokemones = (props) => {
     }
 
     return (
-        <>
             <Container className="text-center">
                 <Row className="mt-5">
                     <h1>Selecciona un pokemon</h1>
@@ -41,7 +36,6 @@ const Pokemones = (props) => {
                     <button className='mt-5 btn btn-secondary' onClick={getPokemon}>Buscar</button>
                 </Row>
             </Container>
-        </>
     );
 };
 
